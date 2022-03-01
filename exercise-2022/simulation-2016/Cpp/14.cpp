@@ -40,7 +40,7 @@ void dijkstra(int s, int n)
     {
         int p = 0;
         for (int j=1; j<=n; j++)
-            if (!vis[j] && dis[s][j]<dis[s][p])
+            if (!vis[j] && dis[s][j]<=dis[s][p])
                 p = j;
         if (p == 0) return ;
         vis[p] = 1;
